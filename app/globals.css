@@ -1,0 +1,73 @@
+/* Reset default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensure consistent width calculations */
+}
+
+body{
+  color: #201F32;
+}
+
+/* Remove list styles for unordered and ordered lists */
+ul, ol {
+  list-style: none;
+}
+
+/* Reset default link styles */
+a {
+  text-decoration: none;
+  color: inherit; /* Inherit text color from parent element */
+}
+
+/* Reset input element styles */
+input,
+button,
+textarea,
+select {
+  font: inherit; /* Inherit font styles from parent element */
+  border: 1px solid #ccc; /* Basic default border */
+  padding: 5px; /* Set some default padding */
+  margin: 5px; /* Set some default margin */
+}
+
+/* Reset form element styles */
+form {
+  display: block; /* Ensure forms render correctly */
+}
+
+/* Reset image styles */
+img {
+  max-width: 100%; /* Prevent images from overflowing containers */
+  height: auto;  /* Maintain aspect ratio */
+}
+
+/* Reset pseudo classes for inputs */
+input:focus,
+button:focus,
+textarea:focus,
+select:focus {
+  outline: none; /* Remove default outline on focus */
+  border-color: #999; /* Change border color on focus */
+}
+
+input[disabled],
+button[disabled],
+textarea[disabled],
+select[disabled] {
+  opacity: 0.5; /* Reduce opacity for disabled elements */
+  cursor: not-allowed; /* Change cursor to indicate disabled state */
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .h2 {
+    @apply text-2xl font-bold;
+  }
+  .s-inp{
+    @apply text-[16px] rounded-full border-0 shadow-sm block;
+  }
+}
